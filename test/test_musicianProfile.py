@@ -3,7 +3,7 @@ from unittest import TestCase
 from dan import musicianProfile
 
 class TestMusicianProfile(TestCase):
-
+    #Tests to try invalid inputs for instrument aswell as valid
     def test_music_instrument(self):
         print("\nInstrument Test A: Create instrument with Valid name")
         try:
@@ -40,9 +40,11 @@ class TestMusicianProfile(TestCase):
         except Exception as err:
             print("\tERROR: ", err)
 
+    # parser same as instrument so no need to test right now
     def test_experience(self):
         pass
 
+    # Tests to try invalid inputs for group status aswell as valid
     def test_group_status(self):
         print("\nGroup Test A: Valid group status")
         try:
