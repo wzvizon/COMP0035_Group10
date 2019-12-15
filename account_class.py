@@ -86,6 +86,7 @@ class user_account:
             raise TypeError('Invalid email address: @ not found')
         return True
 
+    # Validate username by not exceeding length
     @staticmethod
     def validate_username_length(username):
         if len(username) > user_account.MAX_USERNAME_LENGTH:
@@ -93,6 +94,7 @@ class user_account:
         elif len(username) == 0:
             raise TypeError('Invalid username: Please input username')
 
+    # Validate password to not exceed max length
     @staticmethod
     def validate_password_length(password):
         if len(password) > user_account.MAX_PASSWORD_LENGTH:
