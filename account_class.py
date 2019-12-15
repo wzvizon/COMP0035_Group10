@@ -60,7 +60,8 @@ class user_account:
 
     def __str__(self):
         return self.username
-
+    
+    # Validate format to not contain numbers
     @staticmethod
     def validate_name_format(name):
         if type(name) != str:
@@ -69,6 +70,7 @@ class user_account:
             raise TypeError('Invalid name: please do not use number')
         return True
     
+    # Validate email address to find @
     @staticmethod
     def validate_address(email):
         char = []
