@@ -8,7 +8,7 @@ class musicianProfile(userProfile):
 
     ## Constants used for validation
     MINIMUM_LENGTH = 3
-    MAXIMUM_LENGTH = 20
+    MAXIMUM_LENGTH = 100
 
     MINIMUM_STATUS = 0
     MAXIMUM_STATUS = 1
