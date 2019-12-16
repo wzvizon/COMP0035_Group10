@@ -28,7 +28,7 @@ class group_profile_class(userProfile):
 
     def set_group_name(self,band_name,new_group_name):
         self.band_name = new_group_name
-        self.validate_new_name(new_group_name)
+        self.validate_name(new_group_name)
 
     @staticmethod
     def validate_name(band_name):
