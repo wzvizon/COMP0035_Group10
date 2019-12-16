@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from dan import musicianProfile
+from musicianProfile_class import musicianProfile
 
 class TestMusicianProfile(TestCase):
     #Tests to try invalid inputs for instrument aswell as valid
