@@ -118,9 +118,10 @@ class musicianProfile(userProfile):
                          musicianProfile.MAXIMUM_STATUS))
         return True
 
-if __name__ == "__main__":
-    userProfile = 1
-    a1 = musicianProfile("Vocals", "0" , "Not much")
-    a2 = musicianProfile("Drum kit", "a", "More than you")
-    print(a1)
-    print(a2)
+#Base code for testing variables
+#if __name__ == "__main__":
+#    userProfile = 1
+#    a1 = musicianProfile("Vocals", "0" , "Not much")
+#    a2 = musicianProfile("Drum kit", "a", "More than you")
+#    print(a1)
+#   print(a2)
