@@ -1,6 +1,7 @@
 # Weizheng Zhang
 # ID: 16081188
 #THIS IS VENUE PROFILE CLASS
+#This commnet is for my video
 
 class VenueProfile:
 
