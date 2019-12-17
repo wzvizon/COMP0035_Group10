@@ -1,6 +1,6 @@
 # Weizheng Zhang
 # ID: 16081188
-#THIS IS A CLASS FOR VENUE PROFILE
+#THIS IS A VENUE PROFILE CLASS
 
 class VenueProfile:
 
