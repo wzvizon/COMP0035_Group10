@@ -1,3 +1,6 @@
+# Dillon Lad
+# SN: 17053282
+
 from unittest import TestCase
 from group_profile_class import group_profile_class
 
@@ -12,7 +15,7 @@ class Test_group_profile(TestCase):
         self.group_profile_test_case_two = group_profile_class("Band One", ["Marshall","Jermaine","Miles"])
         self.original_band_name = self.group_profile_test_case_two.band_name
         self.group_profile_test_case_two.set_group_name(self.group_profile_test_case_two.band_name,"Holloway's Finest")
-        self.assertEqual(self.original_band_name,self.group_profile_test_case_two.band_name)
+        self.assertNotEqual(self.original_band_name,self.group_profile_test_case_two.band_name)
 
 def main():
     group_test_setup = Test_group_profile()

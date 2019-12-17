@@ -1,3 +1,6 @@
+# Dillon Lad
+# SN: 17053282
+
 class userProfile():
     pass
 
@@ -20,6 +23,15 @@ class group_profile_class(userProfile):
         self.validate_name(groupName)
         self._band_name = groupName
 
+    @property
+    def contributing_artists(self):
+        return self._contributing_artists
+
+    @contributing_artists.setter
+    def contributing_artists(self,artists):
+        self.validate_group(artists)
+        self._contributing_artists = artists
+
     def invite_artist(self,contributing_artists,new_member):
         self.contributing_artists.append(new_member)
 
@@ -35,6 +47,11 @@ class group_profile_class(userProfile):
         if len(band_name) <  group_profile_class.MINIMUM_NAME_LENGTH:
             raise TypeError("Band name not long enough!")
 
+    @staticmethod
+    def validate_group(contributing_artists):
+        if len(contributing_artists) < group_profile_class.MIMIMUM_GROUP_SIZE:
+            raise TypeError("Bands must have at least two members!")
+
 def main():
     try:
         first_group_profile = group_profile_class("Holloway's Finest",["Marshall","Jermaine","Miles"])
@@ -42,6 +59,20 @@ def main():
         print(first_group_profile.contributing_artists)
     except Exception as err:
         print(err)
+
+    try:
+        second_group_profile = group_profile_class("SGP",["Mathers","Cole","McCollum"])
+        print(second_group_profile.band_name)
+        print(second_group_profile.contributing_artists)
+    except Exception as err:
+        print("Second Try: {}".format(err))
+
+    try:
+        third_group_profile = group_profile_class("Holloway's Finest 2",["COMP0035"])
+        print(third_group_profile.band_name)
+        print(third_group_profile.contributing_artists)
+    except Exception as err:
+        print("Third try: {}".format(err))
 
 if __name__ == '__main__':
     main()
