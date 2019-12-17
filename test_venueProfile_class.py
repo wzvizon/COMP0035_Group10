@@ -14,3 +14,6 @@ class TestVenueProfile(TestCase):
     def test_type_is_not_in_the_range(self):
         with self.assertRaises(ValueError):
             test_venue3 = VenueProfile('University College London',10000,100)
+
+if __name__ == "__main__":
+    unittest.main()
